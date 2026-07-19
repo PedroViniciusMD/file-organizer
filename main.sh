@@ -1,7 +1,13 @@
 #! /bin/bash
 
 #config your dir (pwd)
-dir=""
+read -p "Config Your Dir: " dir
+
+if [[ ! -d "$dir" ]]
+then
+    echo "Error: The directory '$dir' does not exist."
+    exit 1
+fi
 
 img_count=0
 vid_count=0
@@ -51,13 +57,20 @@ do
     fi
 done
 
+total_count=$(( img_count+vid_count+music_count+doc_count+slide_count+other_count ))
+
 #Report Infos
-echo "--- Report ($(date '+%Y-%m-%d %H:%M:%S')) ---" > "$dir/report.txt"
-echo "Images moved: $img_count" >> "$dir/report.txt"
-echo "Videos moved: $vid_count" >> "$dir/report.txt"
-echo "Musics moved: $music_count" >> "$dir/report.txt"
-echo "Docs moved: $doc_count" >> "$dir/report.txt"
-echo "Slides moved: $slide_count" >> "$dir/report.txt"
-echo "Other Types moved: $other_count" >> "$dir/report.txt"
+mkdir -p "$dir/reports"
+report_file="$dir/reports/report.txt"
+
+
+echo "*** Report ($(date '+%Y-%m-%d %H:%M:%S')) ***" > "$report_file"
+echo "Images moved: $img_count" >> "$report_file"
+echo "Videos moved: $vid_count" >> "$report_file"
+echo "Musics moved: $music_count" >> "$report_file"
+echo "Docs moved: $doc_count" >> "$report_file"
+echo "Slides moved: $slide_count" >> "$report_file"
+echo "Other Types moved: $other_count" >> "$report_file"
+echo "Total Archives moved: $total_count" >> "$report_file"
 
 shopt -u nocasematch
