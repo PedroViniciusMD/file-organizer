@@ -86,8 +86,8 @@ echo ""
 
 
 #Report File
-mkdir -p "$dir/reports"
-report_file="$dir/reports/report_${timestamp}.log"
+mkdir -p "$dir/_reports"
+report_file="$dir/_reports/report_${timestamp}.log"
 
 echo "==========================================" > "$report_file"
 echo "*** RUN LOG: $(date '+%Y-%m-%d %H:%M:%S') ***" >> "$report_file"
