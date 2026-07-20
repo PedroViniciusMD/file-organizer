@@ -1,6 +1,6 @@
 # Automated File Organizer
 
-A lightweight, Bash script designed to clean my up messy directories (like Downloads folder) by automatically sorting files into categorized folders based on their extensions. It runs seamlessly on both macOS and Linux.
+A lightweight, Bash script designed to clean up my messy directories (like Downloads folder) by automatically sorting files into categorized folders based on their extensions. It runs seamlessly on both macOS and Linux.
 
 ## Features
 
