@@ -87,7 +87,7 @@ echo ""
 
 #Report File
 mkdir -p "$dir/reports"
-report_file="$dir/reports/report.txt"
+report_file="$dir/reports/report_${timestamp}.log"
 
 echo "==========================================" > "$report_file"
 echo "*** RUN LOG: $(date '+%Y-%m-%d %H:%M:%S') ***" >> "$report_file"
@@ -106,3 +106,5 @@ echo "------------------------------------------" >> "$report_file"
 echo "Total Files      : $total_count" >> "$report_file"
 echo "Execution Time   : ${execution_time}s" >> "$report_file"
 echo "==========================================" >> "$report_file"
+echo "Log saved to: $report_file"
+echo ""
