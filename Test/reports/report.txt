@@ -1,8 +1,17 @@
-*** Report (2026-07-19 17:01:49) ***
-Images moved: 0
-Videos moved: 0
-Musics moved: 0
-Docs moved: 0
-Slides moved: 0
+==========================================
+*** RUN LOG: 2026-07-20 14:40:50 ***
+==========================================
+Executed by      : Your user
+Machine          : Your host
+Target Directory : Your directory
+------------------------------------------
+Images moved     : 0
+Videos moved     : 0
+Musics moved     : 0
+Docs moved       : 0
+Slides moved     : 0
 Other Types moved: 0
-Total Archives moved: 0
+------------------------------------------
+Total Files      : 0
+Execution Time   : 0s
+==========================================
